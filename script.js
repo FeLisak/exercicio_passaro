@@ -47,8 +47,9 @@ function update() {
   }
 
   //Movimenta o pássaro para a direita caso ele siga a verificação acima
-  if (passarinho.x < 700 && passarinho.ida === true) {
+  while (passarinho.x < 700 && passarinho.ida === true) {
     passarinho.x += 5;
+    break;
   }
 
   //Verifica se o pássaro está na posição inicial para voltar
@@ -58,8 +59,9 @@ function update() {
   }
 
   //Movimenta o pássaro para a esquerda caso ele siga a verificação acima
-  if (passarinho.x > 100 && passarinho.ida === false) {
+  while (passarinho.x > 100 && passarinho.ida === false) {
     passarinho.x -= 5;
+    break;
   }
 
   //MOVIMENTAÇÃO VERTICAL
@@ -70,8 +72,9 @@ function update() {
   }
 
   //Movimenta o pássaro para baixo caso ele siga a verificação acima
-  if (passarinho.y < 500 && passarinho.sobe === true) {
+  while (passarinho.y < 500 && passarinho.sobe === true) {
     passarinho.y += 5;
+    break;
   }
 
   //Verifica se o pássaro está na posição inicial para subir
@@ -80,7 +83,8 @@ function update() {
   }
 
   //Movimenta o pássaro para cima caso ele siga a verificação acima
-  if (passarinho.y > 100 && passarinho.sobe === false) {
+  while (passarinho.y > 100 && passarinho.sobe === false) {
     passarinho.y -= 5;
+    break;
   }
 }
